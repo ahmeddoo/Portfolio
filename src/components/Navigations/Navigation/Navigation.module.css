@@ -1,0 +1,6 @@
+.active {
+  border-bottom: 2px solid #0769e0;
+}
+.standout {
+  background-color: #ffdb00;
+}

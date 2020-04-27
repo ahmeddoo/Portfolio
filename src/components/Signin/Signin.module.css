@@ -1,0 +1,87 @@
+.Main {
+  max-width: 1200px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.logo {
+  width: 180px;
+  vertical-align: middle;
+}
+.Signin {
+  width: 500px;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: 0px 0px 5px #828282;
+}
+.Signin input {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+.Signin input[type="submit"]:hover {
+  background-color: #525252;
+  color: white;
+  cursor: pointer;
+}
+.pageCaption {
+  flex-grow: 1;
+}
+
+.pageCaption h1 {
+  font-size: 2.5rem;
+  color: #525252;
+}
+h1,
+h3,
+h4 {
+  margin: 0px;
+  line-height: 40px;
+}
+.Signin h1 {
+  font-weight: bold;
+}
+h3 {
+  text-align: center;
+}
+h4 {
+  font-weight: 600;
+}
+.api {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.api img {
+  width: 17px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.google {
+  border: 1.5px solid #ccc;
+}
+.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+.apple {
+  background-color: #000000;
+  color: white;
+}
+a {
+  color: #0769e0;
+  text-decoration: none;
+}
