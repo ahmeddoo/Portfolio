@@ -9,17 +9,27 @@
   width: 180px;
   vertical-align: middle;
 }
-.Signin {
+.Account {
   width: 500px;
   height: 630px;
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
-  padding: 50px;
+  padding: 50px 50px 10px 50px;
   box-shadow: 0px 0px 5px #828282;
 }
-.Signin input {
+.Account > div {
+  width: 100%;
+}
+.Account .form {
+  flex-grow: 1;
+}
+.Account .copy {
+  height: 30px;
+}
+
+.Account input {
   width: 100%;
   margin-bottom: 5px;
   padding: 10px;
@@ -27,7 +37,7 @@
   border-radius: 10px;
   font-size: 1.1rem;
 }
-.Signin input[type="submit"]:hover {
+.Account input[type="submit"]:hover {
   background-color: #525252;
   color: white;
   cursor: pointer;
@@ -46,7 +56,7 @@ h4 {
   margin: 0px;
   line-height: 40px;
 }
-.Signin h1 {
+.Account h1 {
   font-weight: bold;
 }
 h3 {
@@ -55,33 +65,11 @@ h3 {
 h4 {
   font-weight: 600;
 }
-.api {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 50px;
-  border-radius: 20px;
-  margin-bottom: 10px;
+.link {
+  color: #0769e0;
   cursor: pointer;
 }
-.api img {
-  width: 17px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.google {
-  border: 1.5px solid #ccc;
-}
-.facebook {
-  background-color: #3b5998;
-  color: white;
-}
-.apple {
-  background-color: #000000;
-  color: white;
-}
-a {
-  color: #0769e0;
-  text-decoration: none;
+.copy span {
+  color: #525252 !important;
+  font-weight: 400;
 }
