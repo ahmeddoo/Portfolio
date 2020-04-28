@@ -11,7 +11,7 @@ const Navigations = () => {
         <Navigation to="/clients">Clients</Navigation>
         <Navigation to="/blog">Blog</Navigation>
         <Navigation to="/about">About us</Navigation>
-        <Navigation to="/signin" standout={true}>
+        <Navigation to="/account" standout={true}>
           Sign in
         </Navigation>
       </ul>
