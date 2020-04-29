@@ -1,0 +1,4 @@
+
+export const START_TYPING = "START_TYPING";
+export const CHECK_VALIDITY = "CHECK_VALIDITY";
+export const CLEAR_FIELDS = "CLEAR_FIELDS";

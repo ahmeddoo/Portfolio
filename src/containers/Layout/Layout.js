@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <React.Fragment>
       <Route path="/" exact component={Portfolio} />
-      <Route path="/account" exact component={Account} />
+      <Route path="/account" exact> <Account /> </Route>
     </React.Fragment>
   );
 };

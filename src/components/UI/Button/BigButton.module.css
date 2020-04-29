@@ -1,0 +1,9 @@
+.flexRow .big-button {
+    /* background-color: #e41a23; */
+    color: #e41a23;
+    border: none;
+    border: 1.3px solid #e41a23;
+  }
+  .flexRow .big-button:hover {
+    color: #d9d9d9;
+  }
