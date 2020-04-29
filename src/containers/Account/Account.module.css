@@ -29,7 +29,7 @@
   height: 30px;
 }
 
-.Account input {
+/* .Account input {
   width: 100%;
   margin-bottom: 5px;
   padding: 10px;
@@ -37,11 +37,8 @@
   border-radius: 10px;
   font-size: 1.1rem;
 }
-.Account input[type="submit"]:hover {
-  background-color: #525252;
-  color: white;
-  cursor: pointer;
-}
+*/
+
 .pageCaption {
   flex-grow: 1;
 }
@@ -65,10 +62,7 @@ h3 {
 h4 {
   font-weight: 600;
 }
-.link {
-  color: #0769e0;
-  cursor: pointer;
-}
+
 .copy span {
   color: #525252 !important;
   font-weight: 400;

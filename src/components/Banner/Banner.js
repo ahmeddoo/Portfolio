@@ -7,7 +7,7 @@ const Banner = () => {
     <div className={classes.BannerWrapper}>
       <div className={classes.Banner}>
         <h1>
-          dootech is a Fullstack Web <img src={Icon} /> development company,
+          dootech is a Fullstack Web <img src={Icon} alt="icon" /> development company,
           building your website using the trending technologies
         </h1>
         <h2>Reactjs, Nodejs, UX UI Design, Mongodb, Firebase...</h2>
