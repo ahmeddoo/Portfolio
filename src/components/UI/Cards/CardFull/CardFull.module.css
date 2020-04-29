@@ -1,0 +1,18 @@
+.fullFlex {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 10%;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #575757;
+  }
+
+  .fullFlex span {
+    display: inline-block;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 5px;
+  }

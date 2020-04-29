@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 //Custom Components imports
 import Logo from "../Logo/Logo";

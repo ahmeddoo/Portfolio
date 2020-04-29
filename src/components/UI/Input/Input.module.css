@@ -1,0 +1,23 @@
+.Input {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+    
+  .Input::after {
+    display: block;
+    content: "Love";
+    background-color: #525252;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    z-index: 100;
+  }
+
+  .InValid {
+    border: 1px solid salmon;
+    /* background-color: salmon; */
+  }

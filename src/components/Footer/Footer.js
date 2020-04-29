@@ -4,7 +4,7 @@ import classes from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer>
-      <div className={classes.Footer}>Copyright &copy; dootech 2020</div>
+      <div className={classes.Footer}>Copyright &copy; dootech {new Date().getFullYear()}</div>
     </footer>
   );
 };
