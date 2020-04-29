@@ -2,10 +2,10 @@ import React from "react";
 import classes from "./Navigations.module.css";
 import Navigation from "./Navigation/Navigation";
 
-const Navigations = () => {
+const Navigations = props => {
   return (
-    <div className={classes.Navigations}>
-      <ul className={classes.nav}>
+    <div className={props.navWrapper}>
+      <ul className={props.navList}>
         <Navigation to="/">Portfolio</Navigation>
         <Navigation to="/services">Services</Navigation>
         <Navigation to="/clients">Clients</Navigation>

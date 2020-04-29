@@ -4,13 +4,21 @@ import React, { useState, useEffect } from "react";
 import Logo from "../Logo/Logo";
 import Navigations from "../Navigations/Navigations";
 import classes from "./Header.module.css";
+import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 
-const Header = () => {
+const Header = props => {
   return (
     <header>
       <div className={classes.header}>
         <Logo />
-        <Navigations />
+        <div className={classes.spacer} />
+        <Navigations
+          navWrapper={classes.navWrapper}
+          navList={classes.navList}
+        />
+        <div className={classes.toggleButton}>
+          <DrawerToggleButton drawerClickHandler={props.drawerClickHandler} />
+        </div>
       </div>
     </header>
   );
