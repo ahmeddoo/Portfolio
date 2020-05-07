@@ -19,6 +19,9 @@
   padding: 15px;
   color: black;
 }
+.quiz input {
+  cursor: pointer;
+}
 .quiz form h3 {
   text-align: left;
   margin-bottom: 10px;
