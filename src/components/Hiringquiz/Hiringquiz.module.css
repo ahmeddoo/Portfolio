@@ -1,0 +1,32 @@
+.quiz,
+.photo {
+  flex-basis: 48%;
+  min-height: 300px;
+}
+
+.quiz {
+  text-align: left;
+}
+
+.photo {
+  /* background-color: #ccc; */
+  background-image: url("../../assets/images/project4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.quiz p {
+  background-color: #ccc;
+  padding: 15px;
+  color: black;
+}
+.quiz form h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.quiz form > div {
+  margin-bottom: 8px;
+}
+
+.quiz form > div input {
+  margin-right: 8px;
+}

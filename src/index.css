@@ -30,36 +30,13 @@ input {
   outline: none;
 }
 
-.big-button {
-  padding: 15px 50px;
-  font-size: 1.3rem;
-  font-weight: 400;
-  background-color: inherit;
-  border: none;
-  border-radius: 10px;
-  /* color: white; */
-  border: 1.3px solid #525252;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: 1.5s;
-  color: #525252;
-}
-.big-button:hover {
-  background-color: #525252;
-  color: white;
-}
-
-.big-button img {
-  vertical-align: middle;
-  width: 30px !important;
-}
-
-.selected {
-  background-color: #525252;
-  color: white;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
 }

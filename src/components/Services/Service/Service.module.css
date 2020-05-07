@@ -1,0 +1,29 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  flex-basis: 25%;
+  transition: 1s;
+  /* border: 1px solid black; */
+}
+.service img {
+  width: 150px;
+}
+.service span {
+  display: block;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #0769e0;
+}
+.selected {
+  opacity: 1;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+.service:hover {
+  opacity: 1;
+}

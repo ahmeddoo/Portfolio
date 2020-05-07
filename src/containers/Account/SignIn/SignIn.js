@@ -28,24 +28,29 @@ const controls = {
     },
     validation: {
       required: true,
-      length: {min: 5}
+      length: { min: 5 }
     },
     valid: true,
     value: ""
   }
-}
+};
 
 const signInFormReducer = (state, action) => {
-  switch(action.type) {
-    case actionTypes.START_TYPING: return { ...state, [action.field]: {...state[action.field], value: action.value} };
-    default: throw new Error("No command found");
+  switch (action.type) {
+    case actionTypes.START_TYPING:
+      return {
+        ...state,
+        [action.field]: { ...state[action.field], value: action.value }
+      };
+    default:
+      throw new Error("No command found");
   }
-}
+};
 
-const SignIn = ( props ) => {
+const SignIn = props => {
   const [signInFormState, dispatch] = useReducer(signInFormReducer, controls);
   // signin click handler
-  const onSignInHandler = ( event ) => {
+  const onSignInHandler = event => {
     event.preventDefault();
     const signInFormData = {
       username: signInFormState.email.value,
@@ -60,40 +65,52 @@ const SignIn = ( props ) => {
       },
       body: JSON.stringify(signInFormData)
     })
-    .then(res => res.json())
-    .then(res => {
-      console.log(res);
-    })
-    .catch(error => { throw error});
-
-  }
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+      })
+      .catch(error => {
+        throw error;
+      });
+  };
 
   // two way binding...
-  const onInputChangeHandler = ( event, field ) => {
-    dispatch({type: actionTypes.START_TYPING, field, value: event.target.value});
-  }
-    return (
-        <React.Fragment>
-          <h1>Sign in</h1>
-          <SwitchEntry guest={props.guest} toggleAccount={props.toggleAccount} entry="Create account"/>
-    
-          <form>
-          {
-          Object.keys(signInFormState).map(field => {
-            return <Input
-              change={( event ) => onInputChangeHandler(event, field)}
-              value={signInFormState[field].value} 
+  const onInputChangeHandler = (event, field) => {
+    dispatch({
+      type: actionTypes.START_TYPING,
+      field,
+      value: event.target.value
+    });
+  };
+  return (
+    <React.Fragment>
+      <h1>Sign in</h1>
+      <SwitchEntry
+        guest={props.guest}
+        toggleAccount={props.toggleAccount}
+        entry=" Create account"
+      />
+
+      <form>
+        {Object.keys(signInFormState).map(field => {
+          return (
+            <Input
+              change={event => onInputChangeHandler(event, field)}
+              value={signInFormState[field].value}
               inValid={!signInFormState[field].valid}
               key={field}
-              eleConfig={signInFormState[field].eleConfig} 
+              eleConfig={signInFormState[field].eleConfig}
               eleType={signInFormState[field].eleType}
             />
-          })
-        }
-            <EntryButton sign={( event ) => onSignInHandler( event )}> Sign In </EntryButton>
-          </form>
-        </React.Fragment>
-      );
-}
+          );
+        })}
+        <EntryButton sign={event => onSignInHandler(event)}>
+          {" "}
+          Sign In{" "}
+        </EntryButton>
+      </form>
+    </React.Fragment>
+  );
+};
 
 export default SignIn;
