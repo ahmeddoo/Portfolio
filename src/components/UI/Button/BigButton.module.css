@@ -15,7 +15,7 @@
   background-color: inherit;
   border: none;
   border-radius: 10px;
-  border: 1.3px solid #0769e0;
+  border: 1.3px solid #204ecf;
   cursor: pointer;
   margin-left: 10px;
   margin-top: 8px;
@@ -23,18 +23,20 @@
   color: #525252;
 }
 .bigButton:hover {
-  background-color: #0769e0;
+  /* background-color: #0769e0; */
+  /* background-color: #00cc83; */
+  background-color: #204ecf;
   color: white;
-}
-
-.bigButton img {
-  vertical-align: middle;
-  width: 30px !important;
 }
 
 .selected {
-  background-color: #0769e0;
+  /* background-color: #0769e0; */
+  background-color: #009662;
+  background-color: #204ecf;
   color: white;
+}
+.selected:hover {
+  background-color: #112a70;
 }
 .bigButton span {
   /* font-size: 1.4rem !important; */

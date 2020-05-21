@@ -4,11 +4,15 @@ import whatsapp from "../../assets/images/whatsapp.svg";
 import facebook from "../../assets/images/facebookc.svg";
 import linkedin from "../../assets/images/linkedin.svg";
 import instagram from "../../assets/images/instagram.svg";
+import Logo from "../../assets/images/logo.png";
 
 const Footer = () => {
   return (
     <div className={classes.FooterWrapper}>
       <div className={classes.Footer}>
+        <div>
+          <img src={Logo} className={classes.logo} />
+        </div>
         <div>
           <h2>In-Demand Talents </h2>
           <ul>
@@ -17,7 +21,7 @@ const Footer = () => {
             <li>UI design</li>
             <li>UX design</li>
             <li>Digital marketting</li>
-            <li>Search engine optimization (SEO)</li>
+            <li>SEO</li>
           </ul>
         </div>
         <div>
@@ -40,15 +44,22 @@ const Footer = () => {
         </div>
         <div>
           <h2>Socials </h2>
-          <div className={classes.socials}>
+          {/* <div className={classes.socials}>
             <img src={linkedin} alt="Linkedin" title="Linkedin" />
             <img src={facebook} alt="Facebook" title="Facebook" />
             <img src={instagram} alt="Instagram" title="Instagram" />
             <img src={whatsapp} alt="Whatsapp" title="Whatsapp" />
-          </div>
+          </div> */}
+
+          <ul>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Linkedin</li>
+          </ul>
         </div>
       </div>
-      <div>
+      <div className={classes.footerBase}>
         {" "}
         Copyright &copy; dootech {new Date().getFullYear()} All right reserved
       </div>

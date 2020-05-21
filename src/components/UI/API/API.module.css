@@ -1,31 +1,36 @@
 .API {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 50px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    width: 100%;
-  }
-  .API img {
-    width: 17px;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+.API img {
+  width: 17px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
 
-  .GOOGLE {
-    border: 1.5px solid #ccc;
-  }
+.GOOGLE {
+  border: 1.5px solid #ccc;
+}
 
-  .FACEBOOK {
-    background-color: #3b5998;
-    color: white;
+.FACEBOOK {
+  background-color: #3b5998;
+  color: white;
+}
+
+.APPLE {
+  background-color: #000000;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .API {
+    border-radius: 0px !important;
   }
-  
-  .APPLE {
-    background-color: #000000;
-    color: white;
-  }
-  
+}

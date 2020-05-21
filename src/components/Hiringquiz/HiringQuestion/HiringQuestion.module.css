@@ -1,0 +1,8 @@
+.Question {
+  width: 100%;
+}
+.textArea {
+  width: 80%;
+  height: 100px;
+  padding: 5px;
+}

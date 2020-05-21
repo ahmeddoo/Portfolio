@@ -10,8 +10,9 @@
 
 .photo {
   /* background-color: #ccc; */
-  background-image: url("../../assets/images/project4.png");
-  background-size: cover;
+  background-image: url("../../assets/images/banner.svg");
+  background-size: contain;
+  background-position: right;
   background-repeat: no-repeat;
 }
 .quiz p {
@@ -32,4 +33,23 @@
 
 .quiz form > div input {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 992px) {
+  .quiz {
+    flex-basis: 100%;
+  }
+  .photo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quiz p {
+    font-size: 1.1rem !important;
+  }
+
+  .quiz h3 {
+    font-size: 1.2rem;
+  }
 }

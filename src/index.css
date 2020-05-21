@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 13px;
 }
 * {
   box-sizing: border-box;
@@ -10,7 +10,8 @@ body {
   margin: 0px;
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  background-color: #f9f9fb;
   /* background-color: #e7e7e7; */
 }
 h1,
@@ -22,6 +23,7 @@ h6 {
   font-family: "Open Sans", Roboto, sans-serif;
   margin-bottom: 10px;
   font-weight: 400;
+  text-align: left;
 }
 a {
   color: inherit;
@@ -39,4 +41,36 @@ ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 0.8rem !important;
+  }
+  h1 {
+    font-size: 1.7rem !important;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+    line-height: 2.3rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8rem !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 2.1rem !important;
+  }
+
+  h2 {
+    font-size: 1rem !important;
+    line-height: 2rem !important;
+  }
+  label {
+    font-size: 1rem !important;
+  }
 }

@@ -2,9 +2,9 @@
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  padding: 100px 5%;
+  padding: 60px 0%;
   text-align: center;
   font-size: 1.25rem;
   color: #575757;
@@ -15,4 +15,11 @@
   font-size: 1rem;
   font-style: italic;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 1260px) {
+  .fullFlex {
+    padding: 60px 3%;
+    flex-wrap: wrap;
+  }
 }

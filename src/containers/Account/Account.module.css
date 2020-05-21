@@ -1,23 +1,31 @@
 .Main {
   max-width: 1200px;
-  height: 700px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: auto;
+  padding-bottom: 50px;
+}
+.Main li {
+  list-style: none;
+}
+.Main a {
+  text-decoration: none;
 }
 .logo {
   width: 180px;
   vertical-align: middle;
+  transition: 2s;
 }
 .Account {
   width: 500px;
-  height: 630px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
-  padding: 50px 50px 10px 50px;
-  box-shadow: 0px 0px 5px #828282;
+  margin-top: 80px;
+  padding: 50px 50px 0px 50px;
 }
 .Account > div {
   width: 100%;
@@ -29,16 +37,6 @@
   height: 30px;
 }
 
-/* .Account input {
-  width: 100%;
-  margin-bottom: 5px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1.1rem;
-}
-*/
-
 .pageCaption {
   flex-grow: 1;
 }
@@ -47,23 +45,49 @@
   font-size: 2.5rem;
   color: #525252;
 }
-h1,
-h3,
-h4 {
+.Account h1,
+.Account h3,
+.Account h4 {
   margin: 0px;
   line-height: 40px;
 }
 .Account h1 {
   font-weight: bold;
 }
-h3 {
-  text-align: center;
+.Account h3 {
+  text-align: center !important;
 }
-h4 {
+.Account h4 {
   font-weight: 600;
 }
 
-.copy span {
-  color: #525252 !important;
-  font-weight: 400;
+@media screen and (max-width: 1260px) {
+  .Main {
+    padding: 0px 5%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .logo {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Main {
+    padding: 10px 3%;
+    flex-direction: column;
+    height: 600px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .Main > div {
+    width: 100%;
+  }
+  .Account {
+    padding: 10px 0px;
+    box-shadow: none;
+    height: 500px;
+  }
 }

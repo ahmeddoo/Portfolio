@@ -5,12 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 
 // Custom components
 import Layout from "./containers/Layout/Layout";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <React.Fragment>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 

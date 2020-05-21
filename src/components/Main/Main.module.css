@@ -1,9 +1,10 @@
 .Main {
   width: 100%;
   /* background-color: #f7f9fb; */
-  background-color: white;
-  margin-top: 400px;
+  background-color: #f9f9fb;
+  margin-top: 500px;
   position: relative;
   z-index: 3;
   transition: 1s;
+  padding-bottom: 50px;
 }

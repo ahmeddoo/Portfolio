@@ -1,10 +1,10 @@
 import React from "react";
 import BigButton from "../UI/Button/BigButton";
-import CardFull from "../UI/Cards/CardFull/CardFull";
+import classes from "./Welcome.module.css";
 
 const welcome = () => {
   return (
-    <CardFull>
+    <div className={classes.fullFlex}>
       <h1>How can we transform your business?</h1>
       <p style={{ lineHeight: "2.5rem" }}>
         We don't just take your order and serve you a web design. dootech
@@ -13,9 +13,9 @@ const welcome = () => {
         more attractive website for your business.
       </p>
       <BigButton>
-        Get Started <span>></span>
+        Learn more <span>></span>
       </BigButton>
-    </CardFull>
+    </div>
   );
 };
 

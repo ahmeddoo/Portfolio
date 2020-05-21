@@ -15,7 +15,7 @@ const controls = {
     },
     validation: {
       required: true,
-      length: {min: 5},
+      length: { min: 5 },
       match: /(?:^[ a-zA-Z]{5,}$)/
     },
     valid: true,
@@ -25,7 +25,7 @@ const controls = {
     eleType: "input",
     eleConfig: {
       type: "email",
-      placeholder: "email",
+      placeholder: "Email",
       required: true
     },
     validation: {
@@ -44,45 +44,54 @@ const controls = {
     },
     validation: {
       required: true,
-      length: {min: 5}
+      length: { min: 5 }
     },
     valid: true,
     value: ""
   }
-}
+};
 
 const signUpFormReducer = (state, action) => {
-  switch(action.type) {
-    case actionTypes.START_TYPING: return { ...state, [action.field]: {...state[action.field], value: action.value} };
-    case actionTypes.CHECK_VALIDITY: return { ...state, [action.field]: {...state[action.field], valid: action.valid} };
-    default: throw new Error("No command found");
+  switch (action.type) {
+    case actionTypes.START_TYPING:
+      return {
+        ...state,
+        [action.field]: { ...state[action.field], value: action.value }
+      };
+    case actionTypes.CHECK_VALIDITY:
+      return {
+        ...state,
+        [action.field]: { ...state[action.field], valid: action.valid }
+      };
+    default:
+      throw new Error("No command found");
   }
-}
+};
 
-const SignUp = ( props ) => {
+const SignUp = props => {
   const [signUpFormState, dispatch] = useReducer(signUpFormReducer, controls);
 
   // check validity
-  const chectValidity = ( rules, value ) => {
+  const chectValidity = (rules, value) => {
     let isValid = true;
-    if(rules.required) {
+    if (rules.required) {
       isValid = value !== "" && isValid;
     }
 
-    if(rules.length) {
-      if(rules.length.min) {
+    if (rules.length) {
+      if (rules.length.min) {
         isValid = value.length >= rules.length.min && isValid;
       }
     }
 
-    if(rules.match) {
+    if (rules.match) {
       isValid = rules.match.test(value) && isValid;
     }
     return isValid;
   };
 
   // signup click handler
-  const onSignUpHandler = ( event ) => {
+  const onSignUpHandler = event => {
     event.preventDefault();
     const signUpFormData = {
       fullname: signUpFormState.fullname.value,
@@ -97,40 +106,57 @@ const SignUp = ( props ) => {
       },
       body: JSON.stringify(signUpFormData)
     })
-    .then(res => res.json())
-    .then(res => {
-      console.log(res);
-    })
-    .catch(error => console.log(error));
-
-  }
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+      })
+      .catch(error => console.log(error));
+  };
 
   // two way binding...
-  const onInputChangeHandler = ( event, field ) => {
-    dispatch({type: actionTypes.START_TYPING, field, value: event.target.value});
-    dispatch({type: actionTypes.CHECK_VALIDITY, field, valid: chectValidity(signUpFormState[field].validation, event.target.value)});
-  }
+  const onInputChangeHandler = (event, field) => {
+    dispatch({
+      type: actionTypes.START_TYPING,
+      field,
+      value: event.target.value
+    });
+    dispatch({
+      type: actionTypes.CHECK_VALIDITY,
+      field,
+      valid: chectValidity(
+        signUpFormState[field].validation,
+        event.target.value
+      )
+    });
+  };
   return (
     <React.Fragment>
       <h1>Sign up</h1>
-      <SwitchEntry guest={props.guest} toggleAccount={props.toggleAccount} entry="Sign In"/>
+      <SwitchEntry
+        guest={props.guest}
+        toggleAccount={props.toggleAccount}
+        entry=" Sign In"
+      />
       <form>
-        {
-          Object.keys(signUpFormState).map(field => {
-            return <Input
-              change={( event ) => onInputChangeHandler(event, field)}
-              value={signUpFormState[field].value} 
+        {Object.keys(signUpFormState).map(field => {
+          return (
+            <Input
+              change={event => onInputChangeHandler(event, field)}
+              value={signUpFormState[field].value}
               inValid={!signUpFormState[field].valid}
               key={field}
-              eleConfig={signUpFormState[field].eleConfig} 
+              eleConfig={signUpFormState[field].eleConfig}
               eleType={signUpFormState[field].eleType}
             />
-          })
-        }
-        <EntryButton sign={( event ) => onSignUpHandler( event )}> Sign Up </EntryButton>
+          );
+        })}
+        <EntryButton sign={event => onSignUpHandler(event)}>
+          {" "}
+          Sign Up{" "}
+        </EntryButton>
       </form>
     </React.Fragment>
   );
-}
+};
 
 export default SignUp;

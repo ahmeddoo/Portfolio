@@ -9,7 +9,7 @@ const Navigations = props => {
         <Navigation to="/">Portfolio</Navigation>
         <Navigation to="/services">Services</Navigation>
         <Navigation to="/clients">Clients</Navigation>
-        <Navigation to="/blog">Blog</Navigation>
+        <Navigation to="/hiringform">Blog</Navigation>
         <Navigation to="/about">About us</Navigation>
         <Navigation to="/account" standout={true}>
           Sign in

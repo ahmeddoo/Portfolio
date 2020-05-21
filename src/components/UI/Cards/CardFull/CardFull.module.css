@@ -16,3 +16,15 @@
   font-style: italic;
   margin-top: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .fullFlex {
+    padding: 0px 3% !important;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .fullFlex p {
+    line-height: 2rem !important;
+  }
+}

@@ -9,7 +9,7 @@ const controls = {
     eleType: "input",
     eleConfig: {
       type: "email",
-      placeholder: "email",
+      placeholder: "Email",
       required: true
     },
     validation: {

@@ -1,4 +1,65 @@
 .outline {
-    color: #0769e0;
-    /* color: #dae8fa; */
+  color: #0769e0;
+  /* color: #dae8fa; */
+}
+.WeDo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 33.33%;
+  background-color: #ebeced;
+  padding: 40px 30px;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+.WeDo:hover {
+  background-color: #f9f9fa;
+  /* color: #ccc; */
+}
+
+.WeDo h3 {
+  margin: 5px 0px;
+  color: #3f3f3f;
+}
+.WeDo img {
+  width: 100px;
+}
+.WeDo p {
+  margin: 5px 0px;
+  line-height: 2rem;
+  text-align: justify;
+  flex-grow: 1;
+}
+.WeDo span {
+  display: block;
+  margin-top: 15px;
+  color: #ebeced;
+}
+.WeDo:hover span {
+  color: #828282;
+}
+
+@media screen and (max-width: 992px) {
+  .WeDo {
+    flex-basis: 50%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .WeDo {
+    flex-basis: 100%;
+    padding: 30px;
+  }
+  .WeDo img {
+    width: 80px;
+  }
+
+  .WeDo p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .WeDo span {
+    color: #828282;
+  }
+}

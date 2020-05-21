@@ -1,0 +1,16 @@
+.wedoCard {
+  flex-basis: 30%;
+  background-color: white;
+  padding: 30px;
+  text-align: left !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.wedoCard h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.wedoCard h3 {
+  line-height: 2.5rem;
+}

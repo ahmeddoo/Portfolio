@@ -14,7 +14,7 @@
   max-width: 1200px;
   margin: auto;
   height: 100%;
-  padding: 0px 10px;
+  padding: 0px;
 }
 .navWrapper {
   flex-grow: 1;
@@ -37,7 +37,8 @@
 .navList a {
   color: #022045;
   text-decoration: none;
-  padding: 30px 30px;
+  padding: 31px 20px;
+  /* line-height: 64px; */
   font-weight: 500;
   font-size: 1.1rem;
 }
@@ -45,6 +46,11 @@
   border-bottom: 2px solid #020202;
 }
 
+@media screen and (max-width: 1260px) {
+  .header {
+    padding: 0px 3%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .navList a {
     font-size: 1rem;

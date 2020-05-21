@@ -1,0 +1,17 @@
+.Main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto 0px auto;
+  background-color: #f9f9fb;
+}
+.formWrapper {
+  width: 800px;
+  padding: 0px 10% 50px 10%;
+}
+
+@media screen and (max-width: 850px) {
+  .formWrapper {
+    width: 100%;
+    padding: 0px 3% 50px 3%;
+  }
+}

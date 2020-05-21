@@ -11,8 +11,9 @@ const Services = () => {
     { name: "Web Developmet", image: Web, selected: true },
     { name: "Web Design", image: Webdesign, selected: false },
     { name: "Digital Marketting", image: Digitalmarket, selected: false },
-    { name: "Search Engine Optimization", image: Seo, selected: false }
-    // { name: "Digital Marketting", image: Digitalmarket, selected: false }
+    { name: "Search Engine Optimization", image: Seo, selected: false },
+    { name: "Digital Marketting", image: Digitalmarket, selected: false },
+    { name: "Digital Marketting", image: Digitalmarket, selected: false }
   ]);
   return (
     <CardFlexRow>
